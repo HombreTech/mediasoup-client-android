@@ -1,6 +1,6 @@
 # mediasoup-client-android
 
-[![](https://jitpack.io/v/chenjim/mediasoup-client-android.svg)](https://jitpack.io/#chenjim/mediasoup-client-android)
+[![](https://jitpack.io/v/HombreTech/mediasoup-client-android.svg)](https://jitpack.io/#HombreTech/mediasoup-client-android)
 
 mediasoup android client side library https://mediasoup.org
 
