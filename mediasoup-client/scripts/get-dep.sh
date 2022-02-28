@@ -50,7 +50,7 @@ function get_dep() {
 
 function get_libmediasoupclient() {
   GIT_REPO="https://github.com/versatica/libmediasoupclient.git"
-  #GIT_TAG=m79
+  GIT_TAG="3.2.0"
   DEST="deps/libmediasoupclient"
 
   get_dep "${GIT_REPO}" "${GIT_TAG}" "${DEST}"
@@ -61,7 +61,7 @@ function get_webrtc() {
   GIT_TAG="origin/m79"
   DEST="deps/webrtc/src"
 
-  get_dep "${GIT_REPO}" "${GIT_TAG}" "${DEST}"
+  #get_dep "${GIT_REPO}" "${GIT_TAG}" "${DEST}"
 }
 
 function get_abseil-cpp() {
@@ -69,7 +69,7 @@ function get_abseil-cpp() {
   GIT_TAG="189d55a"
   DEST="deps/webrtc/src/third_party/abseil-cpp"
 
-  get_dep "${GIT_REPO}" "${GIT_TAG}" "${DEST}"
+  #get_dep "${GIT_REPO}" "${GIT_TAG}" "${DEST}"
 }
 
 function get_webrtc-libs() {
@@ -77,7 +77,7 @@ function get_webrtc-libs() {
   GIT_TAG="babbbaf78e00b7c2acbd526f5760394ae3b0bb92"
   DEST="deps/webrtc/lib"
 
-  get_dep "${GIT_REPO}" "${GIT_TAG}" "${DEST}"
+  #get_dep "${GIT_REPO}" "${GIT_TAG}" "${DEST}"
 }
 
 case "${DEP}" in
@@ -105,7 +105,7 @@ webrtc-libs)
   exit 1
   ;;
 esac
-
+get_libmediasoupclient
 if [ $? -eq 0 ]; then
   echo ">>> [INFO] done"
 else

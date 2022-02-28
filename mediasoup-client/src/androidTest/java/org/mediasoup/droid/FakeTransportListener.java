@@ -41,6 +41,12 @@ public class FakeTransportListener {
       }
     }
 
+    @Override
+    public String onProduceData(Transport transport, String sctpStreamParameters, String label, String protocol, String appData) {
+      Logger.v(TAG, "onProduceData() " + protocol + "," + label + "," + sctpStreamParameters + "," + appData);
+      return "";
+    }
+
     public String mId;
     public String mDtlsParameters;
 

@@ -121,6 +121,32 @@ static base::android::ScopedJavaLocalRef<jstring> Java_Listener_onProduce(JNIEnv
   return base::android::ScopedJavaLocalRef<jstring>(env, ret);
 }
 
+    static std::atomic<jmethodID> g_org_mediasoup_droid_SendTransport_00024Listener_onProduceData(nullptr);
+    static base::android::ScopedJavaLocalRef<jstring> Java_Listener_onProduceData(JNIEnv* env, const
+    base::android::JavaRef<jobject>& obj, const base::android::JavaRef<jobject>& transport,
+                                                                                  const base::android::JavaRef<jstring>& label,
+                                                                                  const base::android::JavaRef<jstring>& sctpStreamParameters,
+                                                                                  const base::android::JavaRef<jstring>& appData) {
+      jclass clazz = org_mediasoup_droid_SendTransport_00024Listener_clazz(env);
+      CHECK_CLAZZ(env, obj.obj(),
+                  org_mediasoup_droid_SendTransport_00024Listener_clazz(env), NULL);
+
+      jni_generator::JniJavaCallContextChecked call_context;
+      call_context.Init<
+              base::android::MethodID::TYPE_INSTANCE>(
+              env,
+              clazz,
+              "onProduceData",
+              "(Lorg/mediasoup/droid/Transport;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;",
+              &g_org_mediasoup_droid_SendTransport_00024Listener_onProduceData);
+
+      jstring ret =
+              static_cast<jstring>(env->CallObjectMethod(obj.obj(),
+                                                         call_context.base.method_id, transport.obj(), label.obj(), sctpStreamParameters.obj(),
+                                                         appData.obj()));
+      return base::android::ScopedJavaLocalRef<jstring>(env, ret);
+    }
+
 static std::atomic<jmethodID> g_org_mediasoup_droid_SendTransport_Constructor(nullptr);
 static base::android::ScopedJavaLocalRef<jobject> Java_SendTransport_Constructor(JNIEnv* env, jlong
     nativeTransport) {
