@@ -6,11 +6,6 @@ mediasoup android client side library https://mediasoup.org
 
 ## Getting Started
 
-#### How Build
-1. execute `./mediasoup-client/get_all_deps.sh` get dependency c++ libs   
-   for more [get_all_deps.sh](https://github.com/chenjim/mediasoup-client-android/blob/dev/mediasoup-client/scripts/get-dep.sh)
-2. open by `Android Studio` or execute `gradlew` build project  
-
 ### Setting up the dependency
 
 Include `mediasoup-client-android`  into your project, for example:  
@@ -25,8 +20,7 @@ allprojects {
 ```
 Add the dependency
 ```groovy
-//implementation 'org.mediasoup.droid:mediasoup-client:3.0.8-beta-3'
-implementation 'com.github.chenjim:mediasoup-client-android:3.0.8-beta-4'
+implementation 'com.github.HombreTech:mediasoup-client-android:3.0.8-beta-5'
 ```
 ### Example
 
@@ -111,13 +105,9 @@ Consumer consumer =
 [mediasoup-demo-android][mediasoup-demo-android]
 
 ## TODO
-* [X] sync to the latest version of [libmediasoupclient][libmediasoupclient] and adapter to `webrtc` m79
-* [ ] support `DataProducer` etc
-* [ ] add convenient `Gradle Tasks` for sync, compile and so on
-* [X] add script to use `generate-jni` to automatic generate `xxx-jni.h
-* [ ] add java MediaSoupClientException mapping to `MediaSoupClientErrors.hpp
-* [ ] document
-
+* [X] android emulator support
+* [X] fix multiple instances of PeerConnectionFactory
+* [X] fix memory leak
 
 ## Bugs and Feedback
 
