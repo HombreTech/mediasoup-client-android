@@ -75,6 +75,16 @@ namespace mediasoupclient
 		};
 		// clang-format on
 	}
+	
+	Sdp::RemoteSdp::~RemoteSdp()
+	{
+		MSC_TRACE();
+
+		for (const auto* mediaSection : this->mediaSections)
+		{
+			delete mediaSection;
+		}
+	}
 
 	void Sdp::RemoteSdp::UpdateIceParameters(const json& iceParameters)
 	{
